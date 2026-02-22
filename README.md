@@ -67,12 +67,12 @@ Precision, Recall, F1 score – to understand operational trade‑offs between c
 ​
 
 # Model Comparison
-Model	Precision	Recall	F1	MCC	PR‑AUC
-Logistic Regression (Vanilla)	0.49	0.82	0.61	~0.40	Baseline
-Logistic Regression (SMOTE)	0.61	0.69	0.65	0.51	0.652
-Random Forest	0.60	0.58	0.59	0.45	0.630
-XGBoost	0.60	0.64	0.62	0.48	0.660
-# Final Model Selected – Logistic Regression with SMOTE
+| Model                         | Precision | Recall | F1   | MCC   | PR‑AUC   |
+| ----------------------------- | --------- | ------ | ---- | ----- | -------- |
+| Logistic Regression (Vanilla) | 0.49      | 0.82   | 0.61 | ~0.40 | Baseline |
+| Logistic Regression (SMOTE)   | 0.61      | 0.69   | 0.65 | 0.51  | 0.652    |
+| Random Forest                 | 0.60      | 0.58   | 0.59 | 0.45  | 0.630    |
+| XGBoost                       | 0.60      | 0.64   | 0.62 | 0.48  | 0.660    |# Final Model Selected – Logistic Regression with SMOTE
 Although XGBoost achieved the highest PR‑AUC (0.660), Logistic Regression with SMOTE delivered comparable performance with:
 
 A strong balance across precision, recall, F1, PR‑AUC and MCC.
@@ -101,11 +101,12 @@ The first 12 months of tenure show the highest attrition, especially for month�
 👉 Recommendation: Strengthen onboarding, early engagement campaigns, and proactive outreach in the 0–12 month window.
 
 # Operational Impact
-Metric	Baseline Model	Final Model (LogReg + SMOTE)
-False Positives	315	168
-Precision	0.49	0.61
-Recall	0.82	0.69
-MCC	~0.40	0.51
+| Metric          | Baseline Model | Final Model (LogReg + SMOTE) |
+| --------------- | -------------- | ---------------------------- |
+| False Positives | 315            | 168                          |
+| Precision       | 0.49           | 0.61                         |
+| Recall          | 0.82           | 0.69                         |
+| MCC             | ~0.40          | 0.51                         |
 Retention teams now receive 147 fewer false alerts per scoring cycle, improving efficiency and targeting accuracy while still capturing the majority of true churners.
 
 # Project Structure
